@@ -348,9 +348,10 @@ def main():
     Code collates the above functions into a single running script to read through available dataframes
 
     '''
-    path = pathfinder(input('Enter path to csv file: '))
+    path    = pathfinder(input('Enter path to csv file: '))
+    path_2  = pathfinder(input('Enter path to secondary source file: ')) 
     df,c,v = CSV_reader(path)
-    df_1,c,v    = CSV_reader('Downloads/data/restaurants-hours-source-2.csv')
+    df_1,c,v    = CSV_reader(path_2)
     day, time = weekday()
 
     #The below code returns restaurants that are CURRENTLY open in the source_2 file

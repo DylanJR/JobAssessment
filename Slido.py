@@ -358,7 +358,8 @@ def main():
     print('The following restaurants are currently open: ')
     source_check(df, day, time)
     late(df, input('Would you like to search other times? ').lower())
-    info(df)
+    if len(df.columns)> 2:
+        info(df)
     late(df_1,input('Would you like to search the secondary catalogue? y/n ').lower())
     print('Thank you for using this service!')
 
